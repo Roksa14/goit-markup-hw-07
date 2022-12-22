@@ -89,16 +89,17 @@
     letter-spacing: 0.01em;
     color: var(--gray);
   }
-  
+
   .button-icon{
-    fill: var(--black);
+    fill: currentColor;
   
     transition: fill var(--transition-timing) var(--transition-function);
   }
   
   .close-button{
-    @extend %flex-align;
+    display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute;
     padding: 0;
     width: 30px;
@@ -109,12 +110,16 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 
-    &:hover .button-icon,
-    &:focus .button-icon {
-      fill: var(--blue-brand);
+    &:hover ,
+    &:focus {
+    color: var(--blue-brand);
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: none;
     }
   }
-  
+
   .input-icon-group{
     position: relative;
   }
